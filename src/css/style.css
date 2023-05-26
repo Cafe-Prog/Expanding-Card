@@ -38,34 +38,37 @@ body {
 .image-boxes {
     position: relative;
     margin: 0 15px;
+    display: flex;
+    justify-content: right;
     cursor: pointer;
+}
+
+.image-boxes.active img {
+    width: 100%;
+    transition: width .3s ease-in-out;
+}
+
+.image-boxes.active span {
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+    transition-delay: .2s;
 }
 
 .image-boxes img {
     width: 130px;
     height: 600px;
     object-fit: cover;
-    border-radius: 30px;
-    transition: all .3s ease-in-out;
-}
-
-.image-boxes img.active {
-    width: 100%;
+    border-radius: 100px;
 }
 
 .image-boxes span {
     position: absolute;
     bottom: 30px;
-    left: 25px;
+    left: 60px;
     color: #fff;
     font-size: 1.2rem;
     font-weight: 600;
     opacity: 0;
-    transition: all .3s ease-in-out;
-}
-
-.image-boxes span.active {
-    opacity: 1;
 }
 
 /* Expanding Cards End */
