@@ -36,11 +36,22 @@ body {
 }
 
 .image-boxes {
+    width: 180px;
+    height: 800px;
     position: relative;
     margin: 0 15px;
     display: flex;
     justify-content: right;
     cursor: pointer;
+    background-size: cover;
+    background-position: right top;
+    object-fit: cover;
+    border-radius: 100px;
+    transition: width .5s linear;
+}
+
+.image-boxes.active {
+    width: 100%;
 }
 
 .image-boxes.active img {
@@ -52,13 +63,6 @@ body {
     opacity: 1;
     transition: opacity .3s ease-in-out;
     transition-delay: .2s;
-}
-
-.image-boxes img {
-    width: 130px;
-    height: 600px;
-    object-fit: cover;
-    border-radius: 100px;
 }
 
 .image-boxes span {
